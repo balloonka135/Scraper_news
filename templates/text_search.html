@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text search</title>
+</head>
+<body>
+    <div class="text-search">
+        <h2 style="text-align: center;">Enter text for search in news:</h2>
+        <form method="post" action="/text_search">
+            {{ form.csrf }}
+            <input type="text" placeholder="Name" name="token" style="margin-left: 520px;">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

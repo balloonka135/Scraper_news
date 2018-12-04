@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+    <div class="cat_search">
+        <h2 style="text-align: center;">Your results</h2>
+        <ul>
+            {% for item in content %}
+                <li>
+                    <p><strong>Category:</strong> {{ item.category }}</p>
+                    <p><strong>Link:</strong> {{ item.link }}</p>
+                    <p><strong>Content:</strong> {{ item.content }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

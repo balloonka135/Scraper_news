@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>News scraper</title>
+</head>
+<body>
+    <div class="menu">
+        <h2 style="text-align: center;">Choose search type:</h2>
+        <div class="menu-option" style="text-align: center; margin-top: 50px; font-size: 24px;">
+            <a href="{{ url_for('category_search') }}">Search by category</a>
+        </div>
+        <div class="menu-option" style="text-align: center; margin-top: 50px; font-size: 24px;">
+            <a href="{{ url_for('text_search') }}">Text search</a>
+        </div>
+    </div>
+</body>
+</html>

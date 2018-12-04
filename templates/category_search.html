@@ -1,0 +1,21 @@
+{% import "wtf.html" as wtf %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category search</title>
+</head>
+<body>
+    <div class="cat_search">
+        <h2 style="text-align: center;">Choose category</h2>
+        <form method="post" action="/category_search">
+            <!--
+            {{ wtf.form_field(form.category) }}
+            -->
+            <input type="text" placeholder="Name" name="category" style="margin-left: 520px;">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

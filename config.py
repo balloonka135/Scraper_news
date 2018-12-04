@@ -1,0 +1,1 @@
+IP = 'mongodb://localhost:27017/'
