@@ -228,14 +228,14 @@ class Scraper:
         search for website resource that has specific category name
         retrieve news articles in this category
         '''
-        category_name = category_name.decode('utf-8')
+        category_name = category_name.decode('utf-8').lower()
         category_list = []
         category_list += self.tsn_categories()
         category_list += self.ukrnet_categories()
 
         # check if such category name exists
         try:
-            category_obj = next(item for item in category_list if item['name'] == category_name)
+            category_obj = next(item for item in category_list if item['name'].lower() == category_name)
         except StopIteration:
             self.logger.exception('%s - %s', FAILED, 'STOP ITERATION ERROR')
             return False
@@ -413,9 +413,9 @@ class Scraper:
         # self.tsn_categories()
         # self.ukrnet_categories()
         # self.get_ukrnet_articles('Головне', 'https://www.ukr.net/news/main.html')
-        # self.search_by_category('Головне')
+        self.search_by_category('головне')
         # self.get_tsn_articles('Економіка', "https://tsn.ua/groshi")
-        self.search_by_text('авто')
+        # self.search_by_text('авто')
         self.driver.quit()
 
 
